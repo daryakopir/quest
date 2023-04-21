@@ -4,86 +4,86 @@
         <meta charset="utf-8">
         <title>Vitamin D</title>
         <style>
-BODY {
-    font-family: arial;
-    margin: 0;
-    padding: 0;
-    background: black;
-}
-H2 {
-    color: white;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 5vw;
-    white-space: nowrap;
-}
-.page {
-    padding: 20px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-.wrong .field {
-    background: #ef5f5f;
-}
-.target {
-    opacity: 0;
-    position: absolute;
-    background-image: url(1.jpg);
-    background-position: center;
-    background-position-y: -80px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    transition: background 400ms ease, opacity 400ms ease;
-}
-.ok .target {    
-    opacity: 1;
-    background-position-y: center;
-}
-.ok .page {
-    display: none;
-}
-.field {
-    background: #484848;
-    border: 1px solid #484848;
-    box-sizing: border-box;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-    outline: none;
-    width: 100%;
-    transition: background 200ms ease;
-}
-.submit {
-    background: #58b4d7;
-    border: none;
-    border-radius: 2px;
-    color: white;
-    display: block;
-    font-size: 24px;
-    height: 70px;
-    margin-top: 20px;
-    width: 100%;
-}
+            BODY {
+                font-family: arial;
+                margin: 0;
+                padding: 0;
+                background: black;
+            }
+            H2 {
+                color: white;
+                margin-top: 0;
+                margin-bottom: 20px;
+                font-size: 5vw;
+                white-space: nowrap;
+            }
+            .page {
+                padding: 20px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .wrong .field {
+                background: #ef5f5f;
+            }
+            .target {
+                opacity: 0;
+                position: absolute;
+                background-image: url(1.jpg);
+                background-position: center;
+                background-position-y: -80px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 100vh;
+                width: 100%;
+                transition: background 400ms ease, opacity 400ms ease;
+            }
+            .ok .target {    
+                opacity: 1;
+                background-position-y: center;
+            }
+            .ok .page {
+                display: none;
+            }
+            .field {
+                background: #484848;
+                border: 1px solid #484848;
+                box-sizing: border-box;
+                color: white;
+                padding: 20px;
+                font-size: 24px;
+                outline: none;
+                width: 100%;
+                transition: background 200ms ease;
+            }
+            .submit {
+                background: #58b4d7;
+                border: none;
+                border-radius: 2px;
+                color: white;
+                display: block;
+                font-size: 24px;
+                height: 70px;
+                margin-top: 20px;
+                width: 100%;
+            }
         </style>
         <script>
-function submit(e) {
-    document.body.className = '';
+            function submit(e) {
+                document.body.className = '';
 
-    if (e && e.key !== 'Enter') return;
-    
-    const field = document.getElementById('field');
-    if (field.value == 13) {
-        document.body.className = 'ok';
-        field.blur();
-    } else {
-        document.body.className = 'wrong';
-        field.focus();
-    }
-}
+                if (e && e.key !== 'Enter') return;
+
+                const field = document.getElementById('field');
+                if (field.value == 13) {
+                    document.body.className = 'ok';
+                    field.blur();
+                } else {
+                    document.body.className = 'wrong';
+                    field.focus();
+                }
+            }
         </script>
     </head>
     <body>
